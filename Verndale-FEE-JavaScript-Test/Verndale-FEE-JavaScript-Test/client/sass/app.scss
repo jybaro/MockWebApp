@@ -1,0 +1,63 @@
+@import "reset";
+:root {
+	--focus-color: #9CF;	
+	--close-bg-color: #CCC;
+}
+body,
+html {
+	font-weight: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.autocomplete-component {
+	position: relative;
+	display:inline-block;
+	&__option-list {
+		border: solid 0.1rem black;
+		border-radius: 0 0 0.5rem 0.5rem;
+		width: 15rem;
+		overflow-y: auto;
+	}
+	&__option {
+		background-color: transparent;
+		width: 100%;
+		text-align: left;
+		padding: 0.5rem;
+		&:hover, &:active, &:focus {
+			background-color: var(--focus-color);
+		}
+	}
+	&__input {
+		border: solid 0.1rem black;
+		border-radius: 0.5rem;
+		padding: 0.7rem;
+		width: 15rem;
+		
+	}
+	&__close-button {
+		position:absolute;
+		top: 0.7rem;
+		right: 0.7rem;
+		background-color: var(--close-bg-color);
+		border-radius: 50%;
+		&:hover, &:active, &:focus {
+			background-color: var(--focus-color);
+		}
+	}
+	& button {
+		border: unset;
+		&:hover, &:active, &:focus {
+			outline:none;
+		}
+	}
+	&--hide {
+		display: none;
+	}
+	&__size {
+		@for $i from 1 through 5 {
+			&-#{$i} {
+				height: $i * 2rem;
+			}
+		}
+	}
+}
