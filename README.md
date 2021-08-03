@@ -1,3 +1,3 @@
-# Verndale code test
+# Mock webapp
 
-This repo has the resolution of the HTML/CSS Test and the JavaScript Test
+This repo has a first prototype to the project.
